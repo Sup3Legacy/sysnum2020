@@ -1,0 +1,352 @@
+{
+  "creator": "Yosys 0.7 (git sha1 61f6811, i686-w64-mingw32.static-gcc 4.9.3 -Os)",
+  "modules": {
+    "lfu": {
+      "attributes": {
+        "src": "autoyosys\\tmp.v:1"
+      },
+      "ports": {
+        "C1": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "C2": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "o": {
+          "direction": "output",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$auto$simplemap.cc:235:simplemap_logbin$76": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 8 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$auto$simplemap.cc:235:simplemap_logbin$79": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 3 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$auto$simplemap.cc:235:simplemap_logbin$82": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 8 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$auto$simplemap.cc:277:simplemap_mux$84": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 12 ],
+            "S": [ 11 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$auto$simplemap.cc:277:simplemap_mux$85": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 14 ],
+            "S": [ 10 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$auto$simplemap.cc:277:simplemap_mux$86": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 16 ],
+            "S": [ 9 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$auto$simplemap.cc:37:simplemap_not$78": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:10"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$auto$simplemap.cc:37:simplemap_not$81": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$auto$simplemap.cc:85:simplemap_bitop$77": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$auto$simplemap.cc:85:simplemap_bitop$80": {
+          "hide_name": 1,
+          "type": "$_OR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$auto$simplemap.cc:85:simplemap_bitop$83": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "autoyosys\\tmp.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 12 ]
+          }
+        }
+      },
+      "netnames": {
+        "$2\\o[0:0]": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:6"
+          }
+        },
+        "$3\\o[0:0]": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:6"
+          }
+        },
+        "$and$autoyosys\\tmp.v:9$5_Y": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:9"
+          }
+        },
+        "$eq$autoyosys\\tmp.v:10$6_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:10"
+          }
+        },
+        "$eq$autoyosys\\tmp.v:12$11_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:12"
+          }
+        },
+        "$logic_and$autoyosys\\tmp.v:10$8_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:10"
+          }
+        },
+        "$logic_and$autoyosys\\tmp.v:12$12_Y": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:12"
+          }
+        },
+        "$logic_and$autoyosys\\tmp.v:8$4_Y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:8"
+          }
+        },
+        "$or$autoyosys\\tmp.v:11$9_Y": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:11"
+          }
+        },
+        "$xor$autoyosys\\tmp.v:13$13_Y": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:13"
+          }
+        },
+        "C1": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:2"
+          }
+        },
+        "C2": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:2"
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:2"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:2"
+          }
+        },
+        "o": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "autoyosys\\tmp.v:3"
+          }
+        }
+      }
+    }
+  }
+}
